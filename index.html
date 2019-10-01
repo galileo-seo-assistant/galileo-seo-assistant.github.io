@@ -1,0 +1,19 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        function loadSource(url) {
+            $.ajax({
+                url: url,
+            }).done(function (html) {
+                $("#vai").append(html);
+            });
+        }
+    </script>
+    <button onclick="loadSource('https://www.vivadecora.com.br?_escaped_fragment_');">Load html</button>
+    <div class="page_content_wrapper" id="vai"></div>
+</head>
+<body>
+
+</body>
+</html>
